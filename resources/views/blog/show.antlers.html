@@ -1,0 +1,15 @@
+<div class="max-w-2xl mx-auto">
+    <h1 class="text-6xl font-black leading-none text-left">{{ title }}</h1>
+    <img src="{{ featured_image }}" alt="{{ featured_image:alt }}" class="my-12">
+    <div class="flex items-center my-16">
+        <img src="{{ author:avatar }}" alt="" class="h-12 w-12 rounded-full" />
+        <div class="leading-tight ml-3">
+            <p class="font-bold">{{ author:name }}</p>
+            <div class="text-sm text-gray-600">{{ date }}</div>
+        </div>
+    </div>
+
+    <div class="space-y-12 mb-12">
+        {{ blog_content }}
+    </div>
+</div>
