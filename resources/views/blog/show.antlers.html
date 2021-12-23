@@ -1,5 +1,12 @@
 <div class="max-w-2xl mx-auto">
     <h1 class="text-6xl font-black leading-none text-left">{{ title }}</h1>
+    {{ if tags }}
+    <div class="flex space-x-3 mt-8 text-xs font-semibold tracking-widest uppercase">
+        {{ tags }}
+            <a href="{{ url }}" class="bg-black hover:bg-red-800 text-white px-3 py-px rounded">{{ title }}</a>
+        {{ /tags }}
+    </div>
+    {{ /if }}
     <img src="{{ featured_image }}" alt="{{ featured_image:alt }}" class="my-12">
     <div class="flex items-center my-16">
         <img src="{{ author:avatar }}" alt="" class="h-12 w-12 rounded-full" />
