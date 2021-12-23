@@ -1,4 +1,17 @@
 name: Curder
 super: true
+avatar: my-cover.jpeg
 id: 7cee2795-4b4b-4cc4-b699-ca005d4619fd
 password_hash: $2y$10$/XbGv5WpVrPfjBartjp1P.gv9onDWcD5lykvklTKYFkqqyv0P6RBe
+preferences:
+  collections:
+    blog:
+      after_save: create_another
+      columns:
+        - title
+        - featured_image
+        - slug
+        - date
+  assets:
+    assets:
+      mode: grid
