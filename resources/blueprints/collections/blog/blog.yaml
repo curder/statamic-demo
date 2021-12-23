@@ -70,6 +70,18 @@ sections:
           icon: users
           listable: hidden
           instructions_position: above
+      -
+        handle: related_posts
+        field:
+          mode: default
+          create: true
+          collections:
+            - blog
+          display: 'Related Posts'
+          type: entries
+          icon: entries
+          listable: hidden
+          instructions_position: above
   meta:
     display: Meta
     fields:

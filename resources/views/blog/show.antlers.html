@@ -9,7 +9,17 @@
         </div>
     </div>
 
-    <div class="space-y-12 mb-12">
+    <article class="space-y-12 mb-12 content max-w-2xl mx-auto">
         {{ blog_content }}
-    </div>
+    </article>
+    {{ if related_posts }}
+    <aside class="border-t-8 border-black my-24 py-8 max-w-2xl mx-auto">
+        <h3 class="text-2xl font-black">Related Posts</h3>
+        <ul class="text-lg font-bold space-y-2 my-8">
+            {{ related_posts }}
+            <li><a href="{{ url }}" class="text-red-700 hover:text-black">{{ title }}</a></li>
+            {{ /related_posts }}
+        </ul>
+    </aside>
+    {{ /if }}
 </div>
