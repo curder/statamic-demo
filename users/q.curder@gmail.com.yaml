@@ -14,3 +14,9 @@ preferences:
   assets:
     assets:
       mode: grid
+  taxonomies:
+    tags:
+      columns:
+        - title
+        - emoji
+        - slug
