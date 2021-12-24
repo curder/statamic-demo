@@ -1,17 +1,23 @@
 <nav class="py-12 max-w-4xl mx-auto">
-    <div class="flex items-center justify-between">
+    <div class="flex items-center">
         <a href="/" class="font-bold text-2xl">Statamic Demo</a>
-        <ul class="flex items-center space-x-8 font-semibold">
-            {{ nav:collection:pages }}
-                <li><a href="{{ url }}" class="py-2 block {{ if is_current || is_parent }}text-red-700{{ /if }}">{{ title }}</a></li>
-            {{ /nav:collection:pages }}
-        </ul>
+        <div class="flex flex-1 justify-end items-center">
+            <ul class="flex items-center space-x-8 font-semibold">
+                {{ nav:collection:pages }}
+                <li><a href="{{ url }}" class="py-2 block {{ if is_current || is_parent }}text-red-700{{ /if }}">{{
+                    title }}</a></li>
+                {{ /nav:collection:pages }}
+            </ul>
+        </div>
+        <form action="/search">
+            <input type="search" name="q" value="{{ get:q }}" class="border-2 border-black outline-none px-2 h-8 rounded-none placeholder-black font-bold ml-4" placeholder="Search" />
+        </form>
     </div>
     <ul class="bg-black text-white px-4 flex items-center space-x-8">
         {{ nav:collection:pages :from="segment_1"}}
-            {{ if ! no_results }}
-            <li><a href="{{ url }}" class="py-2 block {{ is_current || is_parent ?= 'text-red-700' }}">{{ title }}</a></li>
-            {{ /if }}
+        {{ if ! no_results }}
+        <li><a href="{{ url }}" class="py-2 block {{ is_current || is_parent ?= 'text-red-700' }}">{{ title }}</a></li>
+        {{ /if }}
         {{ /nav:collection:pages }}
     </ul>
 </nav>

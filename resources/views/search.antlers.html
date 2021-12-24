@@ -1,0 +1,14 @@
+<div class="max-w-4xl mx-auto">
+    <h1 class="font-bold text-5xl mb-8">{{ title }} "{{ get:q }}"</h1>
+    <div>
+        {{ search:results as="results" }}
+            {{ if results }}
+                <ul class="space-y-4">
+                    {{ results }}
+                        <li><a href="{{ url }}" class="font-bold hover:text-red-700">{{ title }}</a></li>
+                    {{ /results }}
+                </ul>
+            {{ /if }}
+        {{ /search:results }}
+    </div>
+</div>
