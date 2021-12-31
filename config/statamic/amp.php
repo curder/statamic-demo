@@ -2,7 +2,7 @@
 
 return [
 
-    'enabled' => false,
+    'enabled' => true,
     'route' => 'amp',
 
 ];
