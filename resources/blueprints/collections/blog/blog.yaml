@@ -15,7 +15,7 @@ sections:
         field:
           mode: grid
           container: assets
-          restrict: false
+          restrict: true
           allow_uploads: true
           show_filename: true
           max_files: 1
@@ -24,6 +24,7 @@ sections:
           icon: assets
           listable: hidden
           instructions_position: above
+          folder: blog/futured
       -
         handle: blog_content
         field:
@@ -121,3 +122,11 @@ sections:
           required: true
           validate:
             - required
+      -
+        handle: tags
+        field:
+          type: terms
+          taxonomies:
+            - tags
+          display: Tags
+          mode: select
